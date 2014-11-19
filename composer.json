@@ -1,0 +1,30 @@
+{
+    "name": "rogeriopradoj/composer-platform-show",
+    "description": "A easy way to get information of composer show --platform in a webpage",
+    "keywords": ["php53+", "composer", "show", "platform"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rogerio Prado de Jesus",
+            "email": "rogeriopradoj@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2",
+        "composer/composer": "1.0.*@dev"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*",
+        "squizlabs/php_codesniffer": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "RogerioPradoJ\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "RogerioPradoJ\\Test\\": "tests/"
+        }
+    }
+}
