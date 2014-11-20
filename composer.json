@@ -1,5 +1,5 @@
 {
-    "name": "rogeriopradoj/composer-platform-show",
+    "name": "rogeriopradoj/platform-show",
     "description": "A easy way to get information of composer show --platform in a webpage",
     "keywords": ["composer", "show", "platform"],
     "license": "MIT",
