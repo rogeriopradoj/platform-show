@@ -1,7 +1,7 @@
 {
     "name": "rogeriopradoj/composer-platform-show",
     "description": "A easy way to get information of composer show --platform in a webpage",
-    "keywords": ["php53+", "composer", "show", "platform"],
+    "keywords": ["composer", "show", "platform"],
     "license": "MIT",
     "authors": [
         {
