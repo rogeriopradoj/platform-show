@@ -7,21 +7,19 @@ use Composer\Repository\PlatformRepository;
 class PlatformShow
 {
     private $composerPlatformRepo;
-    private $packages;
+    public $platformPackages;
 
     public function __construct()
     {
         $this->composerPlatformRepo = new PlatformRepository;
-        $this->packages = $this->composerPlatformRepo->getPackages();
-    }
-
-    public function showArray()
-    {
-        return $this->packages;
+        $this->platformPackages = $this->composerPlatformRepo->getPackages();
     }
 
     public function show()
     {
-        return implode('|', $this->packages);
+        $loader = new \Twig_Loader_Filesystem('templates');
+        $twig = new \Twig_Environment($loader, array('debug' => true));
+
+        return $twig->render('layout.html.twig', array('packages' => $this->platformPackages));
     }
 }

@@ -21,11 +21,11 @@ class PlatformShowTest extends PHPUnit_Framework_TestCase
         $this->shower = null;
     }
 
-    public function testShowArrayReturnsArray()
+    public function testPlatformPackagesIsArray()
     {
         $this->assertInternalType(
             'array',
-            $this->shower->showArray()
+            $this->shower->platformPackages
         );
     }
 

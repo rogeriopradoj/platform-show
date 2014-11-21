@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>rogeriopradoj/platform-show</title>
+
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://mottie.github.io/tablesorter/css/theme.bootstrap.css">
+
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div id="container">
+            <header>
+                <h1 class="text-center">
+                    Your PHP Platform <span><i class="fa fa-list"></i>
+                    <br><small>by <a href="https://github.com/rogeriopradoj/platform-show">rogeriopradoj/platform-show</a></small>
+                </h1>
+            </header>
+
+            <div class="table-responsive">
+                <table class="well table table-hover table-condensed table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Platform Package</th>
+                            <th>Version</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for package in packages %}
+                        <tr>
+                            <td>{{ package.prettyName|e }}</td>
+                            <td>{{ package.prettyVersion|e }}</td>
+                            <td>{{ package.description|e }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <footer>
+                <hr>
+                <p class="text-center small">The same you should get running <code>composer show --platform</code> in your terminal.</p>
+                <p class="text-center">Created with <span><i class="fa fa-heart"></i></span> by <a href="https://twitter.com/rogeriopradoj">@rogeriopradoj</a> and maintained on <a href="https://github.com/rogeriopradoj">GitHub</a>.</p>
+            </footer>
+
+            <!-- Latest compiled and minified JS -->
+            <script src="//code.jquery.com/jquery.js"></script>
+            <script src="https://mottie.github.io/tablesorter/js/jquery.tablesorter.min.js"></script>
+            <script src="https://mottie.github.io/tablesorter/js/jquery.tablesorter.widgets.min.js"></script>
+            <script>
+            $(function(){
+
+              $("table").tablesorter({
+                theme : "bootstrap",
+
+                headerTemplate : '{content} {icon}',
+
+                widgets : [ "uitheme"],
+
+                sortList : [[0,0]]
+              })
+            });
+            </script>
+
+        </div>
+    </body>
+</html>
+
