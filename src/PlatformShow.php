@@ -17,10 +17,15 @@ class PlatformShow
 
     public function show()
     {
-        $templates = realpath(__DIR__ . '/../templates'); 
-        $loader = new \Twig_Loader_Filesystem($templates);
-        $twig = new \Twig_Environment($loader, array('debug' => true));
+        $template = file_get_contents(__DIR__ . '/../templates/layout.html');
 
-        return $twig->render('layout.html.twig', array('packages' => $this->platformPackages));
+        $packagesTemplate = '';
+        foreach ($this->platformPackages as $package) {
+            $packagesTemplate .= "<tr><td>{$package->getPrettyName()}</td>";
+            $packagesTemplate .= "<td>{$package->getPrettyVersion()}</td>";
+            $packagesTemplate .= "<td>{$package->getDescription()}</td></tr>";
+        }
+
+        return str_replace('<!--packages//-->', $packagesTemplate, $template);
     }
 }
