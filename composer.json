@@ -11,8 +11,7 @@
     ],
     "require": {
         "php": ">=5.3.3",
-        "composer/composer": "1.0.*@dev",
-        "twig/twig": "~1.0"
+        "composer/composer": "1.0.*@dev"
     },
     "require-dev": {
         "phpunit/phpunit": "*",
