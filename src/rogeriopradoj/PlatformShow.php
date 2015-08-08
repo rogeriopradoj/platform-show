@@ -17,7 +17,7 @@ class PlatformShow
 
     public function show()
     {
-        $template = file_get_contents(__DIR__ . '/../templates/layout.html');
+        $template = file_get_contents(__DIR__ . '/../../templates/layout.html');
 
         $packagesTemplate = '';
         foreach ($this->platformPackages as $package) {
