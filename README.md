@@ -29,8 +29,6 @@ Install
 
 Install `RogerioPradoJ\PlatformShow` using Composer.
 
-> For now, it's necessary to force installation of composer/composer @dev as well.
-
 ```
 composer require "rogeriopradoj/platform-show"
 ```
@@ -41,12 +39,8 @@ Usage
 ```php
 <?php
 
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 
-use RogerioPradoJ\PlatformShow;
-
-$shower = new PlatformShow();
-
-echo $shower->show();
+echo \RogerioPradoJ\PlatformShow::show();
 
 ```

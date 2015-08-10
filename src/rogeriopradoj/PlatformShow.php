@@ -6,21 +6,15 @@ use Composer\Repository\PlatformRepository;
 
 class PlatformShow
 {
-    private $composerPlatformRepo;
-    public $platformPackages;
-
-    public function __construct()
-    {
-        $this->composerPlatformRepo = new PlatformRepository;
-        $this->platformPackages = $this->composerPlatformRepo->getPackages();
-    }
-
-    public function show()
+    public static function show()
     {
         $template = file_get_contents(__DIR__ . '/../../templates/layout.html');
 
+        $composerPlatformRepo = new PlatformRepository;
+        $platformPackages = $composerPlatformRepo->getPackages();
+
         $packagesTemplate = '';
-        foreach ($this->platformPackages as $package) {
+        foreach ($platformPackages as $package) {
             $packagesTemplate .= "<tr><td>{$package->getPrettyName()}</td>";
             $packagesTemplate .= "<td>{$package->getPrettyVersion()}</td>";
             $packagesTemplate .= "<td>{$package->getDescription()}</td></tr>";
