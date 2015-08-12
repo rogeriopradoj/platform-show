@@ -9,6 +9,7 @@ rogeriopradoj/platform-show
 [![Quality Score](https://img.shields.io/scrutinizer/g/rogeriopradoj/platform-show.svg?style=flat-square)](https://scrutinizer-ci.com/g/rogeriopradoj/platform-show)
 [![Total Downloads](https://img.shields.io/packagist/dt/rogeriopradoj/platform-show.svg?style=flat-square)](https://packagist.org/packages/rogeriopradoj/platform-show)
 [![Dependency Status](https://www.versioneye.com/user/projects/546e2af29dcf6d41e7000989/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/546e2af29dcf6d41e7000989)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/c718e488-b5c6-4a63-b156-999eb8fea9a8/mini.png)](https://insight.sensiolabs.com/projects/c718e488-b5c6-4a63-b156-999eb8fea9a8)
 
 
 A easy way to get information of composer show --platform in a webpage.
