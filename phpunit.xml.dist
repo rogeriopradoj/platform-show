@@ -26,6 +26,9 @@
     <filter>
         <whitelist>
             <directory>src</directory>
+            <exclude>
+                <directory>src/Composer</directory>
+            </exclude>
         </whitelist>
     </filter>
 
