@@ -45,3 +45,10 @@ require '../vendor/autoload.php';
 echo \RogerioPradoJ\PlatformShow::show();
 
 ```
+
+Screen Shot
+-----------
+
+An example of what the output looks like:
+
+![Example screen shot of the application](screen-shot.png)
